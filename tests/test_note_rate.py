@@ -6,8 +6,13 @@ import pytest
 def test_rate_note_unsuccessful(note):
    assert  rate_note(note) == "unsuccessful"
 
-def test_rate_10_returns_acceptable():
-    assert rate_note(10) == "acceptable"
+@pytest.mark.parametrize("note",[10,11])
 
-def test_rate_12_returns_good():
-    assert rate_note(12) == "good"
+def test_rate_note_acceptable(note):
+   assert  rate_note(note) == "acceptable"
+
+
+@pytest.mark.parametrize("note",[12,13])
+
+def test_rate_note_good(note):
+   assert  rate_note(note) == "good"
