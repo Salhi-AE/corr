@@ -23,7 +23,7 @@ def test_rate_note_very_good(note):
    assert  rate_note(note) == "very good"
 
 
-@pytest.mark.parametrize("note",[16])
+@pytest.mark.parametrize("note",[16,17,18,19,20])
 
 def test_rate_note_excellent(note):
    assert  rate_note(note) == "excellent"
