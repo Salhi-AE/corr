@@ -1,5 +1,5 @@
 def rate_note(note: int) -> str:
-    if note == -1:
+    if note < 0 or note > 20:
         raise ValueError("impossible")
 
     if note >= 0 and note < 10:
